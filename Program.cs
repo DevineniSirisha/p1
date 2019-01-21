@@ -15,19 +15,20 @@ namespace p1
                 string jobName = "";
                 decimal laborCost = 0.0m;
                 int days = 0;
-                int hours = 0;
+                double hours = 0.0;
                 decimal acCost = 0.0m;
                 bool includeFood = false;
                 bool includeTravel = false;
                 while (name == "")
                 {
-                    Console.WriteLine("Hello User! Please enter your name: ");
+                    Console.WriteLine($"\nWelcome User!");
+                    Console.WriteLine($"Please enter your name:");
                     name = Console.ReadLine();
 
                 }
                 while (jobName == "")
                 {
-                    Console.WriteLine("Please enter the job name");
+                    Console.WriteLine($"Hello {name}!! ,Please enter the job name: ");
                     jobName = Console.ReadLine();
                 }
 
@@ -40,7 +41,7 @@ namespace p1
                 while (hours == 0.0)
                 {
                     Console.WriteLine($"Enter number of hours per day: ");
-                    hours = Convert.ToInt32(Console.ReadLine());
+                    hours = Convert.ToDouble(Console.ReadLine());
                 }
                 while (days == 0)
                 {
@@ -78,23 +79,23 @@ namespace p1
 
                 }
                 var res = calEstimate(laborCost, days, hours, acCost, includeFood, includeTravel);
-                Console.WriteLine($"Hello {name}, your job {jobName} costs you {res} ");
+                Console.WriteLine($"\n{name.ToUpper()}, your job {jobName} costs you {res} \n");
 
 
                 Console.WriteLine($"Enter q to quit or c to continue :");
                 exit = Convert.ToChar(Console.ReadLine());
                 if (exit == 'q')
                 {
-                    Console.WriteLine($"GoodBye! Have a nice day !!");
+                    Console.WriteLine($"GoodBye! Have a nice day !! \n");
                     break;
                 }
             }
 
         }
-        static decimal calEstimate(decimal laborCost, int days, int hours, decimal acCost, bool includeFood, bool includeTravel)
+        static decimal calEstimate(decimal laborCost, int days, double hours, decimal acCost, bool includeFood, bool includeTravel)
         {
-            var num = days * hours;
-            return days * hours * (laborCost) + days * (acCost + FOOD_COST + TRAVEL_COST);
+            var num = Convert.ToDecimal(days * hours);
+            return num*(laborCost) + days * (acCost + FOOD_COST + TRAVEL_COST);
 
         }
     }
