@@ -13,5 +13,5 @@ Include food cost and travel cost per day.
 ## How to calculate the estimate
 Add up the labor cost for total number of hours(days * hours) + accomodation cost +food and travel costs.
 ## Screenshots of the app after giving inputs
-![output]( https://github.com/DevineniSirisha/p1/blob/master/Screenshot%20(160).png?raw=true )
+![output](https://raw.githubusercontent.com/DevineniSirisha/p1/master/Screenshot%20(160).png)
 
