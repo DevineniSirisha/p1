@@ -14,3 +14,4 @@ Include food cost and travel cost per day.
 Add up the labor cost for total number of hours(days * hours) + accomodation cost +food and travel costs.
 ## Screenshots of the app after giving inputs
 
+

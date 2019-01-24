@@ -32,7 +32,7 @@ namespace p1
                     jobName = Console.ReadLine();
                 }
 
-                while (laborCost == 0.0m)
+                while (laborCost ==0.0m)
                 {
                     Console.WriteLine($"Enter the cost of labor per hour: ");
                     laborCost = Convert.ToDecimal(Console.ReadLine());
